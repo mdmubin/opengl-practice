@@ -25,7 +25,10 @@ find_path(STB_INCLUDE_DIRS "stb.h")
 set(
     project_lib_files
     # project library files goes here
+    ${CMAKE_SOURCE_DIR}/include/utils/FileIO.cpp
     ${CMAKE_SOURCE_DIR}/include/ogl/Init.cpp
+    ${CMAKE_SOURCE_DIR}/include/ogl/shaders/Shader.cpp
+    ${CMAKE_SOURCE_DIR}/include/ogl/textures/Texture.cpp
 )
 
 # sources
