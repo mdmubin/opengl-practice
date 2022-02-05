@@ -1,0 +1,12 @@
+{
+    "name": "opengl-practice",
+    "version-string": "0.1.0",
+    "dependencies": [
+        "opengl",
+        "glew",
+        "glfw3",
+        "glm",
+        "fmt",
+        "stb"
+    ]
+}
