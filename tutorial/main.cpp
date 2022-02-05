@@ -1,6 +1,8 @@
 #include <iostream>
 
+#include "all.hpp"
+
 int main()
 {
-    std::cout << "Hello, World";
+    // tutorial::flash();
 }
