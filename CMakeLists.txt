@@ -38,6 +38,8 @@ set(
     ${CMAKE_SOURCE_DIR}/tutorial/main.cpp
     ${CMAKE_SOURCE_DIR}/tutorial/colorflash/colorflash.cpp
     ${CMAKE_SOURCE_DIR}/tutorial/triangle/triangle.cpp
+    ${CMAKE_SOURCE_DIR}/tutorial/rectangle/rectangle.cpp
+    ${CMAKE_SOURCE_DIR}/tutorial/rectangle/shadedRectangle.cpp
 )
 
 # executable

@@ -6,4 +6,6 @@ int main()
 {
     // tutorial::flash();
     // tutorial::triangle();
+    // tutorial::rectangle();
+    tutorial::shadedRectangle();
 }
