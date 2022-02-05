@@ -37,6 +37,7 @@ set(
     # source files go here
     ${CMAKE_SOURCE_DIR}/tutorial/main.cpp
     ${CMAKE_SOURCE_DIR}/tutorial/colorflash/colorflash.cpp
+    ${CMAKE_SOURCE_DIR}/tutorial/triangle/triangle.cpp
 )
 
 # executable
