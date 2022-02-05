@@ -1,4 +1,4 @@
-#include "init.hpp"
+#include "Init.hpp"
 
 #include <cstdlib>
 

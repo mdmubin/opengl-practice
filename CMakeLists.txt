@@ -25,7 +25,7 @@ find_path(STB_INCLUDE_DIRS "stb.h")
 set(
     project_lib_files
     # project library files goes here
-    ${CMAKE_SOURCE_DIR}/include/ogl/init.cpp
+    ${CMAKE_SOURCE_DIR}/include/ogl/Init.cpp
 )
 
 # sources
