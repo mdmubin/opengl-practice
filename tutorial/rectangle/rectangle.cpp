@@ -13,7 +13,7 @@
 void tutorial::rectangle()
 {
     ogl::initGLFW(4, 6);
-    auto window = ogl::createGLContext("opengl window", 800, 800, true);
+    auto window = ogl::createGLContext("Rectangle Demo", 800, 800, true);
     ogl::printInfo();
 
     // rectangle data

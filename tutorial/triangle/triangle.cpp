@@ -13,7 +13,7 @@
 void tutorial::triangle()
 {
     ogl::initGLFW(4, 6);
-    auto window = ogl::createGLContext("opengl window", 800, 800, true);
+    auto window = ogl::createGLContext("Triangle Demo", 800, 800, true);
     ogl::printInfo();
 
     // triangle data

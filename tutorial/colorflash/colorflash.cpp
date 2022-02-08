@@ -19,7 +19,7 @@ void tutorial::flash()
     auto startTime = timer::now();
 
     ogl::initGLFW(4, 6);
-    auto window = ogl::createGLContext("opengl window", 1280, 720, true);
+    auto window = ogl::createGLContext("Color Flash Demo", 1280, 720, true);
     ogl::printInfo();
 
     glm::vec4 clearColour {0};

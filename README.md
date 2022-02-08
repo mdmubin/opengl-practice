@@ -3,6 +3,13 @@
 This repository contains code that I used for practicing graphics programming
 using OpenGL.
 
+Clone this repository:
+```
+git clone --recurse-submodules https://github.com/mdmubin/opengl-practice.git
+```
+And to run the demos, go to `tutorial/main.cpp` and uncomment whichever demo
+that you want to see.
+
 ---
 
 ## Linux Dependencies:
