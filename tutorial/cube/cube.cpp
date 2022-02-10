@@ -15,6 +15,7 @@ void tutorial::cube()
     auto window = ogl::createGLContext("Static Cube Demo", 800, 800, false);
     ogl::printInfo();
 
+    // from opengl-tutorial.org/beginners-tutorials/tutorial-4-a-colored-cube
     float cubeVertices[] = {
         -1.0f, -1.0f, -1.0f,
         -1.0f, -1.0f,  1.0f,
@@ -58,14 +59,14 @@ void tutorial::cube()
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
 
-
     uint32_t CubeBuffer{};
     glGenBuffers(1, &CubeBuffer);
     glBindBuffer(GL_ARRAY_BUFFER, CubeBuffer);
     glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices, GL_STATIC_DRAW);
-    glVertexAttribPointer(0, 3, GL_FLOAT, false, sizeof(float) * 3, static_cast<void*>(0));
+    glVertexAttribPointer(0, 3, GL_FLOAT, false, sizeof(float) * 3, reinterpret_cast<void*>(0));
     glEnableVertexAttribArray(0);
 
+    // from opengl-tutorial.org/beginners-tutorials/tutorial-4-a-colored-cube
     float cubeColors[] = {
         0.583f,  0.771f,  0.014f,
         0.609f,  0.115f,  0.436f,
@@ -105,12 +106,11 @@ void tutorial::cube()
         0.982f,  0.099f,  0.879f
     };
 
-
     uint32_t ColorBuffer{};
     glGenBuffers(1, &ColorBuffer);
     glBindBuffer(GL_ARRAY_BUFFER, ColorBuffer);
     glBufferData(GL_ARRAY_BUFFER, sizeof(cubeColors), cubeColors, GL_STATIC_DRAW);
-    glVertexAttribPointer(1, 3, GL_FLOAT, false, 0, static_cast<void*>(0));
+    glVertexAttribPointer(1, 3, GL_FLOAT, false, 0, reinterpret_cast<void*>(0));
     glEnableVertexAttribArray(1);
 
 
