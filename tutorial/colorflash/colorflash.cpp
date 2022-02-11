@@ -1,14 +1,14 @@
 #include <chrono>
 #include <iostream>
 
-#include <fmt/core.h>
 #include <fmt/color.h>
+#include <fmt/core.h>
 #include <fmt/format.h>
 
 #include <glm/vec4.hpp>
 
-#include "ogl/Init.hpp"
 #include "colorflash.hpp"
+#include "ogl/Init.hpp"
 
 // chrono aliases
 using timer = std::chrono::steady_clock;
@@ -22,14 +22,14 @@ void tutorial::flash()
     auto window = ogl::createGLContext("Color Flash Demo", 1280, 720, true);
     ogl::printInfo();
 
-    glm::vec4 clearColour {0};
+    glm::vec4 clearColour{0};
 
     while (!glfwWindowShouldClose(window))
     {
         auto currentTime = duration(timer::now() - startTime).count();
         clearColour = {
-            (float)std::sin(currentTime) * 0.5f + 0.5f,
-            (float)std::cos(currentTime) * 0.5f + 0.5f,
+            (float) std::sin(currentTime) * 0.5f + 0.5f,
+            (float) std::cos(currentTime) * 0.5f + 0.5f,
             0.2f,
             1.0f,
         };

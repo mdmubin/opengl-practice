@@ -9,7 +9,6 @@
 #include "ogl/Init.hpp"
 #include "ogl/shaders/Shader.hpp"
 
-
 void tutorial::rectangle()
 {
     ogl::initGLFW(4, 6);
@@ -46,14 +45,17 @@ void tutorial::rectangle()
     // bind the rectangle data to the VBO
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     // bind the indices of the triangles to the EBO
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), &indices, GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), &indices,
+                 GL_STATIC_DRAW);
     // specify the data layout within the buffer
     glVertexAttribPointer(0, 3, GL_FLOAT, true, sizeof(float) * 3, nullptr);
     glEnableVertexAttribArray(0);
 
     // adding shaders
-    std::string vertShaderFP = "assets/shaders/rectangle/default/vertexShader.vert";
-    std::string fragShaderFP = "assets/shaders/rectangle/default/fragmentShader.frag";
+    std::string vertShaderFP =
+        "assets/shaders/rectangle/default/vertexShader.vert";
+    std::string fragShaderFP =
+        "assets/shaders/rectangle/default/fragmentShader.frag";
 
     auto vertShader = ogl::shaderFromFile(vertShaderFP, GL_VERTEX_SHADER);
     auto fragShader = ogl::shaderFromFile(fragShaderFP, GL_FRAGMENT_SHADER);
@@ -63,8 +65,7 @@ void tutorial::rectangle()
     // create shader program
     auto shaderProgram = ogl::createShaderProgram(shaders);
     // clean up after the shaders have been linked to the gl shader program
-    for (auto shaderRef : shaders)
-        glDeleteShader(shaderRef);
+    for (auto shaderRef : shaders) glDeleteShader(shaderRef);
 
     glUseProgram(shaderProgram);
 

@@ -36,12 +36,12 @@ void tutorial::triangle()
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     // specify the data layout within the buffer
     glVertexAttribPointer(
-        0,                    // starting index of your data
-        3 ,                   // size of your data
-        GL_FLOAT,             // type of your data
-        true,                 // specify if the data is already normalized
-        sizeof(float) * 3,    // how many bytes from 1 vertex to the the next
-        nullptr               // I have no clue what this is....yet...
+        0,                 // starting index of your data
+        3,                 // size of your data
+        GL_FLOAT,          // type of your data
+        true,              // specify if the data is already normalized
+        sizeof(float) * 3, // how many bytes from 1 vertex to the the next
+        nullptr            // I have no clue what this is....yet...
     );
     // enable the generated VAO.
     // In our case only 1 VAO has been generated, so enable the VAO at index 0.
@@ -61,8 +61,7 @@ void tutorial::triangle()
     // create shader program
     auto shaderProgram = ogl::createShaderProgram(shaders);
     // clean up after the shaders have been linked to the gl shader program
-    for (auto shaderRef : shaders)
-        glDeleteShader(shaderRef);
+    for (auto shaderRef : shaders) glDeleteShader(shaderRef);
 
     glUseProgram(shaderProgram);
 
@@ -70,11 +69,10 @@ void tutorial::triangle()
     {
         // draw the shape
         glDrawArrays(
-            GL_TRIANGLES,    // draw mode
-            0,               // first index to draw (from the buffer object)
-            3                // number of vertices drawn
+            GL_TRIANGLES, // draw mode
+            0,            // first index to draw (from the buffer object)
+            3             // number of vertices drawn
         );
-
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
