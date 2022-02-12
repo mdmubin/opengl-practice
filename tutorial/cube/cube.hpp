@@ -8,4 +8,9 @@ namespace tutorial
  */
 void cube();
 
+/**
+ * @brief Create a 3D textured cube onto an OpenGL context
+ */
+void texturedCube();
+
 } // namespace tutorial

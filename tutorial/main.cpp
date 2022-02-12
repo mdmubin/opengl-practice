@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "all.hpp"
 
 int main()
@@ -8,5 +6,6 @@ int main()
     // tutorial::triangle();
     // tutorial::rectangle();
     // tutorial::shadedRectangle();
-    tutorial::cube();
+    // tutorial::cube();
+    tutorial::texturedCube();
 }

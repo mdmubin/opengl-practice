@@ -26,9 +26,9 @@ set(
     project_lib_files
     # project library files goes here
     ${CMAKE_SOURCE_DIR}/include/utils/FileIO.cpp
+    ${CMAKE_SOURCE_DIR}/include/utils/Image.cpp
     ${CMAKE_SOURCE_DIR}/include/ogl/Init.cpp
     ${CMAKE_SOURCE_DIR}/include/ogl/shaders/Shader.cpp
-    ${CMAKE_SOURCE_DIR}/include/ogl/textures/Texture.cpp
 )
 
 # sources
@@ -41,6 +41,7 @@ set(
     ${CMAKE_SOURCE_DIR}/tutorial/rectangle/rectangle.cpp
     ${CMAKE_SOURCE_DIR}/tutorial/rectangle/shadedRectangle.cpp
     ${CMAKE_SOURCE_DIR}/tutorial/cube/cube.cpp
+    ${CMAKE_SOURCE_DIR}/tutorial/cube/texturedCube.cpp
 )
 
 # executable

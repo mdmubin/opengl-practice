@@ -12,7 +12,7 @@
 void tutorial::cube()
 {
     ogl::initGLFW(4, 6);
-    auto window = ogl::createGLContext("Static Cube Demo", 800, 800, false);
+    auto window = ogl::createGLContext("Colored Cube Demo", 800, 800, false);
     ogl::printInfo();
 
     // from opengl-tutorial.org/beginners-tutorials/tutorial-4-a-colored-cube
@@ -62,10 +62,8 @@ void tutorial::cube()
     uint32_t CubeBuffer{};
     glGenBuffers(1, &CubeBuffer);
     glBindBuffer(GL_ARRAY_BUFFER, CubeBuffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices,
-                 GL_STATIC_DRAW);
-    glVertexAttribPointer(0, 3, GL_FLOAT, false, sizeof(float) * 3,
-                          reinterpret_cast<void*>(0));
+    glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices, GL_STATIC_DRAW);
+    glVertexAttribPointer(0, 3, GL_FLOAT, false, sizeof(float) * 3, reinterpret_cast<void *>(0));
     glEnableVertexAttribArray(0);
 
     // from opengl-tutorial.org/beginners-tutorials/tutorial-4-a-colored-cube
@@ -111,9 +109,8 @@ void tutorial::cube()
     uint32_t ColorBuffer{};
     glGenBuffers(1, &ColorBuffer);
     glBindBuffer(GL_ARRAY_BUFFER, ColorBuffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(cubeColors), cubeColors,
-                 GL_STATIC_DRAW);
-    glVertexAttribPointer(1, 3, GL_FLOAT, false, 0, reinterpret_cast<void*>(0));
+    glBufferData(GL_ARRAY_BUFFER, sizeof(cubeColors), cubeColors, GL_STATIC_DRAW);
+    glVertexAttribPointer(1, 3, GL_FLOAT, false, 0, reinterpret_cast<void *>(0));
     glEnableVertexAttribArray(1);
 
     std::string vertShaderFP = "assets/shaders/cube/default/vertexShader.vert";
@@ -139,17 +136,15 @@ void tutorial::cube()
 
     while (!glfwWindowShouldClose(window))
     {
-        // glClearColor(0.3f, 0.2f, 0.8f, 1.0f);
+        glClearColor(.1f, .1f, .1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         glDrawArrays(GL_TRIANGLES, 0, 36);
 
         // changing the transform matrix through the x, y & z axes by 0.5 degree
-        transform = glm::rotate(transform, glm::radians(0.5f),
-                                glm::vec3(1.0f, 1.0f, 1.0f));
+        transform = glm::rotate(transform, glm::radians(0.5f), glm::vec3(1.0f, 1.0f, 1.0f));
         // passing transform matrix to the shader to update the cube rotation
-        glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "transformMat"),
-                           1, false, glm::value_ptr(transform));
+        glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "transformMat"), 1, false, glm::value_ptr(transform));
 
         glfwSwapBuffers(window);
         glfwPollEvents();

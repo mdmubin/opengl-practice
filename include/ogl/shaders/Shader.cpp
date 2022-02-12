@@ -47,10 +47,7 @@ void verifyShader(uint32_t shaderRef)
 uint32_t ogl::createShaderProgram(std::vector<uint32_t> &compiledShaders)
 {
     auto program = glCreateProgram();
-    for (auto shader : compiledShaders)
-    {
-        glAttachShader(program, shader);
-    }
+    for (auto shader : compiledShaders) { glAttachShader(program, shader); }
     glLinkProgram(program);
     verifyProgram(program);
     return program;
@@ -67,6 +64,6 @@ void verifyProgram(uint32_t programRef)
     {
         char log[1024];
         glGetProgramInfoLog(programRef, 1024, nullptr, log);
-        fmt::print(stderr, "FAILED TO LINK PROGRAM SUCCESSFULLY:\n{}\n", log);
+        fmt::print(stderr, "FAILED TO LINK PROGRAM:\n{}\n", log);
     }
 }
