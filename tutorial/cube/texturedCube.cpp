@@ -8,7 +8,6 @@
 
 #include <fmt/core.h>
 
-
 #include "ogl/Init.hpp"
 #include "ogl/shaders/Shader.hpp"
 
