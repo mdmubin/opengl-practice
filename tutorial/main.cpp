@@ -7,5 +7,6 @@ int main()
     // tutorial::rectangle();
     // tutorial::shadedRectangle();
     // tutorial::cube();
-    tutorial::texturedCube();
+    // tutorial::texturedCube();
+    tutorial::ioDemo();
 }

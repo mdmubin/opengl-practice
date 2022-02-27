@@ -42,6 +42,7 @@ set(
     ${CMAKE_SOURCE_DIR}/tutorial/rectangle/shadedRectangle.cpp
     ${CMAKE_SOURCE_DIR}/tutorial/cube/cube.cpp
     ${CMAKE_SOURCE_DIR}/tutorial/cube/texturedCube.cpp
+    ${CMAKE_SOURCE_DIR}/tutorial/io/ioDemo.cpp
 )
 
 # executable
