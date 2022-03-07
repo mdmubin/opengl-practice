@@ -29,6 +29,7 @@ set(
     ${CMAKE_SOURCE_DIR}/include/utils/Image.cpp
     ${CMAKE_SOURCE_DIR}/include/ogl/Init.cpp
     ${CMAKE_SOURCE_DIR}/include/ogl/shaders/Shader.cpp
+    ${CMAKE_SOURCE_DIR}/include/ogl/io/Keyboard.cpp
 )
 
 # sources

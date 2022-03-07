@@ -28,6 +28,4 @@ public:
     static void updateKeyState(int key, int state) { keymap[key] = state; }
 };
 
-std::map<int, int> KeyBoard::keymap{};
-
 } // namespace ogl
