@@ -172,10 +172,10 @@ void processKeyInput(uint32_t shaderRef, glm::mat4 &position)
     };
 
     glm::vec3 direction(0.0f, 0.0f, 0.0f);
-    if (w != GLFW_RELEASE) direction.y = 0.025f;
+    if (w != GLFW_RELEASE) direction.y =  0.025f;
     if (a != GLFW_RELEASE) direction.x = -0.025f;
     if (s != GLFW_RELEASE) direction.y = -0.025f;
-    if (d != GLFW_RELEASE) direction.x = 0.025f;
+    if (d != GLFW_RELEASE) direction.x =  0.025f;
     move(direction);
 
     // reset position
